@@ -7,15 +7,17 @@ public class LengthTest {
 
     @Test
     public void shouldReturnTrueIfInputIs1cm(){
-        Length length = new Length();
-        boolean result = length.compare("1cm");
+        Length length1 = new Length(1);
+        Length length2 = new Length(1);
+        boolean result = length1.compareLengths(length2);
         assertTrue(result);
     }
 
     @Test
     public void shouldReturnFalseIfInputIs2cm(){
-        Length length = new Length();
-        boolean result = length.compare("2cm");
+        Length length1 = new Length(1);
+        Length length2 = new Length(2);
+        boolean result = length1.compareLengths(length2);
         assertFalse(result);
     }
 }
