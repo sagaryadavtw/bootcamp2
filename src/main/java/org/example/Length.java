@@ -1,7 +1,7 @@
 package org.example;
 
 public class Length {
-    public boolean check(String s) {
-        return s.equals("1cm");
+    public boolean compare(String inputValue) {
+        return inputValue.equals("1cm");
     }
 }
