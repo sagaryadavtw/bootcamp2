@@ -10,21 +10,16 @@ public class Length {
         this.value = value;
         this.unit = unit;
     }
-
-    public boolean compareLengths(Length length) {
-        return this.value == length.value;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Length length = (Length) o;
-       int value =  getValuesInCentemiters();
+       int value =  getValuesInCentimeters();
        return value == length.value;
     }
 
-    public int getValuesInCentemiters() {
+    public int getValuesInCentimeters() {
         int result;
         if (Unit.METER.equals(unit)) {
             result = (int) (value * 100);
